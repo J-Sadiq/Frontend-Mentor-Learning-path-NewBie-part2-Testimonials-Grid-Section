@@ -37,3 +37,163 @@
 html {
   font-size: 62.5%;
 }
+
+body {
+  font-family: "Barlow";
+  font-weight: 400;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--Grey-100);
+}
+
+main {
+  max-width: 100rem;
+  width: 95%;
+}
+
+#testimonials-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 4fr);
+  grid-template-rows: repeat(2, 2fr);
+  justify-items: start;
+  column-gap: 2rem;
+  row-gap: 2rem;
+}
+
+.testimonial {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  box-shadow:
+    rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  border-radius: 8px;
+  padding: 2rem;
+}
+
+.card-profile {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.card-profile img {
+  border-radius: 50px;
+  width: 3rem;
+}
+.profile-info {
+  color: var(--Grey-100);
+  font-size: 0.8rem;
+}
+.profile-name {
+  font-weight: 200;
+  margin-bottom: 0.2rem;
+}
+
+.testimonial h3 {
+  z-index: 1;
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+.testimonial p {
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: var(--Grey-100);
+  line-height: 1.3;
+}
+.testimonial blockquote p::before {
+  content: open-quote;
+}
+
+.testimonial blockquote p::after {
+  content: close-quote;
+}
+
+.testimonial-Daniel {
+  position: relative;
+  grid-column: 1/3;
+  background-color: var(--Purple-500);
+  color: var(--White);
+}
+
+.testimonial-jonathan {
+  background-color: var(--Grey-500);
+  color: var(--White);
+}
+
+.testimonial-kira {
+  grid-column: 4/5;
+  grid-row: 1/3;
+  background-color: var(--White);
+}
+
+.testimonial-kira .profile-info {
+  color: black;
+}
+
+.testimonial-kira p {
+  color: var(--Grey-500);
+}
+.testimonial-jeanette {
+  background-color: var(--White);
+}
+.testimonial-jeanette .profile-info {
+  color: black;
+}
+.testimonial-jeanette p {
+  color: var(--Grey-500);
+}
+
+.testimonial-patrick {
+  grid-column: 2/4;
+  background-color: var(--Dark-blue);
+  color: var(--Grey-100);
+}
+
+.pattern {
+  width: 8rem;
+  position: absolute;
+  top: 0;
+  right: 4rem;
+  z-index: 0;
+  opacity: 0.7;
+}
+@media (max-width: 55rem) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media (max-width: 43rem) {
+  html {
+    font-size: 37.75%;
+  }
+}
+
+@media (max-width: 30rem) {
+  html {
+    font-size: 50%;
+  }
+  main {
+    max-width: 45rem;
+    width: 90%;
+  }
+  #testimonials-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+  .testimonial-Daniel {
+    grid-column: auto;
+  }
+  .testimonial-patrick {
+    grid-column: auto;
+  }
+  .testimonial-kira {
+    grid-column: auto;
+    grid-row: auto;
+  }
+}
